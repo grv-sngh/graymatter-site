@@ -30,7 +30,6 @@ function App() {
           </li>
         ))}
       </ul>
-      <p>working</p>
     </div>
   );
 }

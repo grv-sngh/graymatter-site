@@ -13,4 +13,9 @@ Backend
 Frontend
 ---
 - Simple npx create-react-app
-- 
+- Create App.js to fetch and render the post using axios by connecting to the backend app.
+- Render the posts
+
+Hosting
+---
+- Deploying on vercel
