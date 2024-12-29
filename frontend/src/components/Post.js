@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router-dom'; 
+import ReactMarkdown from 'react-markdown'; // Import a Markdown rendering library
+
 
 function Post() {
   const [post, setPost] = useState(null);
@@ -27,8 +29,10 @@ function Post() {
     <div>
       <h2>{post.title}</h2>
       <p>By {post.author}</p>
+      <ReactMarkdown children={post.content} /> 
+      <h2>Actual content</h2>
       <p>{post.content}</p>
-    </div>
+    </div> 
   );
 }
 
