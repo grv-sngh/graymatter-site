@@ -29,6 +29,7 @@ function Post() {
     <div>
       <h2>{post.title}</h2>
       <p>By {post.author}</p>
+      {post.imageUrl && <img src={post.imageUrl} alt={post.title} />} 
       <ReactMarkdown children={post.content} /> 
       <h2>Actual content</h2>
       <p>{post.content}</p>

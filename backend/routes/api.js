@@ -31,12 +31,13 @@ router.get('/posts/:id', async (req, res) => {
 // Create a new post
 router.post('/create', async (req, res) => {
     try {
-      const { title, content } = req.body;
+      const { title, content, imageUrl  } = req.body;
   
       // Create a new post object
       const newPost = new Post({
         title,
         content,
+        imageUrl, 
       });
   
       // Save the post to the database
