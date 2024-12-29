@@ -24,7 +24,7 @@ function Home() {
       <ul>
         {posts.map((post) => (
           <li key={post._id}> 
-            <h3>{post.title}</h3>
+            <a href={`https://symmetrical-invention-gj6gq6q6j44h9w9x-3000.app.github.dev/post/${post._id}`}><h3>{post.title}</h3></a>
             <p>{post.content}</p>
             <p>Author: {post.author}</p> 
           </li>
