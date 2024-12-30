@@ -5,13 +5,21 @@
     /* width: 45%; */
     max-width: 650px;
     margin: 50px auto;
-   
+
     /*
     word-spacing: 20%;
     letter-spacing: -1px;
      */
     box-sizing: border-box;
     min-height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+    .post-container {
+        width: 100%;
+        margin: 50px auto;
+        padding: 20px;
+    }
 }
 
 .body-text {

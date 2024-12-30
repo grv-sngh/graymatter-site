@@ -21,7 +21,7 @@ function Home() {
 
   return (
     <div>
-      <div className="posts-container">
+      <div className="post-container">
       <h1>Blog Posts</h1>
         {posts.map((post) => (
           <div key={post._id} className="post-card">
