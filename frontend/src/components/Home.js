@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import './Home.css'
 
 function Home() {
   const [posts, setPosts] = useState([]);
@@ -20,16 +21,17 @@ function Home() {
 
   return (
     <div>
-      <h1>My Blog</h1>
-      <ul>
+      <div className="posts-container">
+      <h1>Blog Posts</h1>
         {posts.map((post) => (
-          <li key={post._id}> 
-            <a href={`https://symmetrical-invention-gj6gq6q6j44h9w9x-3000.app.github.dev/post/${post._id}`}><h3>{post.title}</h3></a>
-            <p>{post.content}</p>
-            <p>Author: {post.author}</p> 
-          </li>
+          <div key={post._id} className="post-card">
+            <a href={`https://symmetrical-invention-gj6gq6q6j44h9w9x-3000.app.github.dev/post/${post._id}`}>
+              <h3>{post.title}</h3>
+            </a>
+            <p>{post.content.substring(0, 100)}...</p> <p>Author: {post.author}</p>
+          </div>
         ))}
-      </ul>
+    </div>
     </div>
   );
 }

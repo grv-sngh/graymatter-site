@@ -1,0 +1,42 @@
+.posts-container {
+    padding: 20px 0;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    /* width: 45%; */
+    max-width: 650px;
+    margin: 50px auto;
+   
+    /*
+    word-spacing: 20%;
+    letter-spacing: -1px;
+     */
+    box-sizing: border-box;
+    min-height: 100vh;
+}
+
+
+.post-card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin: 10px 0;
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    /* Adjust width as needed */
+    text-align: left;
+    
+}
+
+.post-card a {
+    text-decoration: none;
+    color: #333;
+}
+
+.post-card p {
+    margin-top: 5px;
+}
+
+ul {
+    list-style: none;
+}

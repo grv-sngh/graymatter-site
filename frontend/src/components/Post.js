@@ -3,6 +3,8 @@ import axios from 'axios';
 import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown'; // Import a Markdown rendering library
 import './Post.css';
+import Header from './Header';
+import Footer from './Footer';
 
 function Post() {
     const [post, setPost] = useState(null);
@@ -26,17 +28,18 @@ function Post() {
     }
 
     return (
-
-        <div className="post-container">
-            <h2>{post.title}</h2>
-            <p>By {post.author}</p>
-            <div className="post-image">
-                {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
+        <>
+            <div className="post-container body-text">
+                <h2>{post.title}</h2>
+                <p>By {post.author}</p>
+                <div className="post-image">
+                    {post.imageUrl && <img src={post.imageUrl} alt={post.title} />}
+                </div>
+                <div className="post-content">
+                    <ReactMarkdown children={post.content} />
+                </div>
             </div>
-            <div className="post-content">
-                <ReactMarkdown children={post.content} />
-            </div>
-        </div>
+        </>
     );
 }
 
